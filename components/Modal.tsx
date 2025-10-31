@@ -1,6 +1,5 @@
-
 import React, { useEffect } from 'react';
-import { CloseIcon } from '../constants';
+import { CloseIcon } from '../constants.tsx';
 
 interface ModalProps {
   isOpen: boolean;

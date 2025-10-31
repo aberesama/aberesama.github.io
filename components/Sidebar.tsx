@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PERSONAL_INFO, SOCIAL_LINKS, MailIcon, PhoneIcon, LocationIcon, ChevronDownIcon, SunIcon, MoonIcon } from '../constants';
+import { PERSONAL_INFO, SOCIAL_LINKS, MailIcon, PhoneIcon, LocationIcon, ChevronDownIcon, SunIcon, MoonIcon } from '../constants.tsx';
 
 interface SidebarProps {
   isOpen: boolean;

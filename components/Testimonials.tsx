@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { TESTIMONIALS, QuoteIcon } from '../constants';
-import { Testimonial } from '../types';
-import Modal from './Modal';
+import { TESTIMONIALS, QuoteIcon } from '../constants.tsx';
+import { Testimonial } from '../types.ts';
+import Modal from './Modal.tsx';
 
 // Component to display the full testimonial details inside the modal
 const TestimonialDetails: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (

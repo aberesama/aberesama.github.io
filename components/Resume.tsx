@@ -1,6 +1,6 @@
 import React from 'react';
-import { EDUCATION, EXPERIENCE, SKILLS, CERTIFICATIONS, BookIcon, BriefcaseIcon } from '../constants';
-import { TimelineItem, Certification } from '../types';
+import { EDUCATION, EXPERIENCE, SKILLS, CERTIFICATIONS, BookIcon, BriefcaseIcon } from '../constants.tsx';
+import { TimelineItem, Certification } from '../types.ts';
 
 const RESUME_URL = 'https://drive.google.com/drive/folders/1c5P87Y3kwbElqukoHD9Rug-tCB5CrAfq?usp=sharing';
 

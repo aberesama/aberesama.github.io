@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Resume from './components/Resume';
-import Portfolio from './components/Portfolio';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
-import { Page } from './types';
+import Sidebar from './components/Sidebar.tsx';
+import Navbar from './components/Navbar.tsx';
+import About from './components/About.tsx';
+import Resume from './components/Resume.tsx';
+import Portfolio from './components/Portfolio.tsx';
+import Blog from './components/Blog.tsx';
+import Contact from './components/Contact.tsx';
+import { Page } from './types.ts';
 
 const App: React.FC = () => {
   const [activePage, setActivePage] = useState<Page>('About');

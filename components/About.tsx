@@ -1,6 +1,6 @@
 import React from 'react';
-import { ABOUT_TEXT, SERVICES } from '../constants';
-import Testimonials from './Testimonials';
+import { ABOUT_TEXT, SERVICES } from '../constants.tsx';
+import Testimonials from './Testimonials.tsx';
 
 const About: React.FC = () => {
   return (

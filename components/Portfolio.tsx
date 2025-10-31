@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { PORTFOLIO_PROJECTS } from '../constants';
-import { Project } from '../types';
-import Modal from './Modal';
-import { EyeIcon } from '../constants';
+import { PORTFOLIO_PROJECTS } from '../constants.tsx';
+import { Project } from '../types.ts';
+import Modal from './Modal.tsx';
+import { EyeIcon } from '../constants.tsx';
 
 const ProjectDetails: React.FC<{ project: Project }> = ({ project }) => (
     <div className="flex flex-col lg:flex-row gap-8">

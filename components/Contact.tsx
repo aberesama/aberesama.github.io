@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { SendIcon } from '../constants';
+import { SendIcon } from '../constants.tsx';
 
 const Contact: React.FC = () => {
   return (

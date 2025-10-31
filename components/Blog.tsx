@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
-import { BLOG_POSTS } from '../constants';
-import { BlogPost } from '../types';
-import Modal from './Modal';
+import { BLOG_POSTS } from '../constants.tsx';
+import { BlogPost } from '../types.ts';
+import Modal from './Modal.tsx';
 
 const BlogDetails: React.FC<{ post: BlogPost }> = ({ post }) => (
     <div>
