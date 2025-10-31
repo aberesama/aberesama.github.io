@@ -1,0 +1,5 @@
+{
+  "name": "Personal Portfolio Website",
+  "description": "A modern, modular personal portfolio website built with React and Tailwind CSS, inspired by the vCard template. It is designed for easy customization and deployment on platforms like GitHub Pages.",
+  "requestFramePermissions": []
+}

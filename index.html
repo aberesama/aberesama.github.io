@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Dark Theme (Default) */
+        --bg-color: #1e1e1e;
+        --sidebar-bg-color: #262626;
+        --content-bg-color: #202020;
+        --border-color: #383838;
+        --text-primary: #ffffff;
+        --text-secondary: #a0a0a0;
+        --accent-color: #99FFFF;
+        --accent-color-hover: #88e5e5;
+        --font-primary: 'Poppins', sans-serif;
+      }
+      
+      html.light {
+        /* Light Theme */
+        --bg-color: #f0f2f5;
+        --sidebar-bg-color: #ffffff;
+        --content-bg-color: #fafafa;
+        --border-color: #e0e0e0;
+        --text-primary: #1e1e1e;
+        --text-secondary: #555555;
+        --accent-color: #3B82F6;
+        --accent-color-hover: #2563EB;
+      }
+
+      body {
+        font-family: var(--font-primary);
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: var(--sidebar-bg-color);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: var(--accent-color);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-color-hover);
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-in-out;
+      }
+    </style>
+    <script>
+      // Apply theme from localStorage before page load to prevent FOUC
+      if (localStorage.getItem('theme') === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        document.documentElement.classList.add('light');
+      } else {
+        document.documentElement.classList.remove('light');
+      }
+
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              bgColor: 'var(--bg-color)',
+              sidebarBg: 'var(--sidebar-bg-color)',
+              contentBg: 'var(--content-bg-color)',
+              borderColor: 'var(--border-color)',
+              textPrimary: 'var(--text-primary)',
+              textSecondary: 'var(--text-secondary)',
+              accent: 'var(--accent-color)',
+              accentHover: 'var(--accent-color-hover)',
+            },
+            fontFamily: {
+              sans: ['var(--font-primary)', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fade-in 0.5s ease-in-out',
+            },
+            keyframes: {
+              'fade-in': {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
