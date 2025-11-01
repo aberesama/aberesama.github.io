@@ -100,53 +100,9 @@
         }
       }
     </script>
-    <!-- 1. Load SystemJS and Babel -->
-    <script src="https://unpkg.com/systemjs@6.14.3/dist/s.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/systemjs-plugin-babel@0.0.25/plugin-babel.js"></script>
-
-    <!-- 2. Configure SystemJS -->
-    <script>
-      System.config({
-        // Use the Babel plugin for transpilation
-        transpiler: 'plugin-babel',
-        // Define where to find the libraries
-        map: {
-          'react': 'https://aistudiocdn.com/react@^18.2.0',
-          'react-dom': 'https://aistudiocdn.com/react-dom@^18.2.0',
-          'react-dom/client': 'https://aistudiocdn.com/react-dom@^18.2.0/client',
-          'plugin-babel': 'https://unpkg.com/systemjs-plugin-babel@0.0.25/plugin-babel.js',
-          'systemjs-babel-build': 'https://unpkg.com/systemjs-plugin-babel@0.0.25/systemjs-babel-7.1.0.min.js'
-        },
-        // Configure Babel to transpile React and TypeScript
-        meta: {
-          '*.tsx': {
-            babelOptions: {
-              react: true,
-              typescript: true
-            }
-          },
-           '*.ts': {
-            babelOptions: {
-              typescript: true
-            }
-          }
-        }
-      });
-    </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
-    <!-- 3. Tell SystemJS to import your application -->
-    <script type="systemjs-import" src="index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
